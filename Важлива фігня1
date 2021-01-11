@@ -1,0 +1,27 @@
+e = input("Введіть текст : ")
+def longest_word():
+ print("Найдовше слово - ", max([(len(e), e) for e in e.split(" ")])[1])
+
+def shortest_word():
+  print("Найкоротше слово - ", min([(len(e), e) for e in e.split(" ")])[1])
+
+k = e.split()
+def frequentes_word():
+ import collections
+ c = collections.Counter()
+ h = list(k)
+ for word in h:
+  c[word] += 1
+  m= 0
+  max_word= ''
+ for word, count in c.items():
+    if m< count:
+        m =count
+        max_word = word
+ print('Слово, яке входить найчастіше - ', max_word)
+
+
+
+shortest_word()
+longest_word()
+frequentes_word()
